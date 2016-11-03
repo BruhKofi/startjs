@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+
+<body>
+
+    <h1 id="header1">This is a heading</h1>
+    <h1 id="header2">show pic</h1>
+    <p id="para">This is a paragraph.</p>
+    <button id="button"> Click me</button>
+    <input id="input" type="text"></input>
+    <button id="button1"> Submit</button>
+    <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Wolf_on_alert.jpg/220px-Wolf_on_alert.jpg" alt="WOlf" />
+
+    <script type="text/javascript">
+        var colorInput = document.getElementById('input');
+        var wolfPic = document.getElementById('pic');
+        var bttnOne = document.getElementById('button')
+
+
+        bttnOne.addEventListener('click', function() {
+            alert('hey welcome');
+
+            document.getElementById('header1').style.color = "blue";
+        });
+
+        document.getElementById('button1').addEventListener('click', function() {
+            document.getElementById('para').style.color = colorInput.value;
+        });
+
+        wolfPic.addEventListener('load', function() {
+            wolfPic.style.display = "none";
+        });
+
+        document.getElementById('header2').addEventListener('mouseover', function() {
+            wolfPic.style.display = "block";
+        });
+        document.getElementById('header2').addEventListener('mouseout', function() {
+            wolfPic.style.display = "none";
+
+        });
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
